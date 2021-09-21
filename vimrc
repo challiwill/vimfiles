@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 " Add plugins here
 " Install with :PlugInstall
 Plug 'altercation/vim-colors-solarized'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'jnurmine/Zenburn'
 Plug 'kshenoy/vim-signature'
@@ -26,9 +27,9 @@ Plug 'mhinz/vim-signify'
 Plug 'nvie/vim-flake8'
 Plug 'tmhedberg/SimpylFold'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-projectionist'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all --system-libclang' }
 
 " All of your Plugins must be added before the following line
@@ -40,11 +41,9 @@ filetype plugin indent on    " required
 " Custom settings
 """
 
-" Settings for ctrlp
-" suggested by https://github.com/ctrlpvim/ctrlp.vim/readme.md
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" General setup
+"""
+" Standard configurations
+"""
 nnoremap <space> za " Enable folding with the spacebar
 let mapleader = "," " Remap leader key (default is '\')
 set number          " Line numbering
@@ -64,6 +63,14 @@ nnoremap <unique> <expr> <CR> empty(&buftype) ? ':w<CR>' : '<CR>'
 " Open in same directory
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
+"""
+" Plugin configurations
+"""
+
+" Settings for ctrlp
+" suggested by https://github.com/ctrlpvim/ctrlp.vim/readme.md
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 " YCM window close after completion
 let g:ycm_autoclose_preview_window_after_completion=1
 " YCM go to definition remap
@@ -78,6 +85,9 @@ else
 endif
 " Toggle solarized light/dark
 call togglebg#map("<F5>")
+
+" Remap for projectionist (go to test)
+nnoremap gt :A<CR>
 
 
 """
