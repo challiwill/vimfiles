@@ -16,6 +16,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Use homebrew's clangd For YCM
+let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
+
 " Add plugins here
 " Install with :PlugInstall
 Plug 'altercation/vim-colors-solarized'
@@ -34,7 +37,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-projectionist'
 Plug 'vim-scripts/indentpython.vim'
 " Plug 'vim-syntastic/syntastic'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all --system-libclang' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required

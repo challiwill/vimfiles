@@ -1,4 +1,9 @@
 ## Install
+YouCompleteMe needs vim installed with python and some other dependencies:
+```
+brew install vim cmake
+```
+
 ```
 cd ~/
 git clone git@github.com:challiwill/vimfiles.git
