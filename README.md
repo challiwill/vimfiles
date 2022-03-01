@@ -21,7 +21,15 @@ gt		go to test/implementation file (depends on `.projections.json` file)
 
 
 ###  Navigating Files
-<space>		open/close fold
+<space>		toggle fold
+zM          fold all
+zR          open all folds
+zc          close fold
+zo          open fold
+za          toggle fold
+zC          close folds to top level
+zO          open folds to top level
+zA          toggle folds to top level
 <ctrl>-f	page down
 <ctrl>-b	page up
 gcc		comment/uncomment

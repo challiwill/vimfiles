@@ -20,8 +20,12 @@ call plug#begin('~/.vim/plugged')
 " Install with :PlugInstall
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
+" TODO configure or learn to use dandavison/delta
+Plug 'dandavison/delta'
 Plug 'elixir-lang/vim-elixir'
 Plug 'jnurmine/Zenburn'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'mhinz/vim-signify'
 Plug 'nvie/vim-flake8'
@@ -29,7 +33,7 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-projectionist'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all --system-libclang' }
 
 " All of your Plugins must be added before the following line
