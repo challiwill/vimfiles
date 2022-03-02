@@ -45,7 +45,7 @@ filetype plugin indent on    " required
 
 
 """
-" Custom settings
+" CUSTOM SETTINGS
 """
 
 """
@@ -69,6 +69,8 @@ set splitright
 nnoremap <unique> <expr> <CR> empty(&buftype) ? ':w<CR>' : '<CR>'
 " Open in same directory
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" Enable backspace on insert
+set backspace=indent,start,eol
 
 """
 " Plugin configurations
